@@ -1,0 +1,56 @@
+{
+   "abstract" : "L<Dist::Zilla> plugins for ARJONES",
+   "author" : [
+      "Andrew Jones <andrew@arjones.co.uk>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300002, CPAN::Meta::Converter version 2.112150",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-PluginBundle-ARJONES",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla" : "2.100922",
+            "Dist::Zilla::PluginBundle::Basic" : 0,
+            "Dist::Zilla::PluginBundle::Git" : 0,
+            "Dist::Zilla::Role::PluginBundle::Easy" : 0,
+            "Moose" : 0,
+            "Moose::Autobox" : 0,
+            "Pod::Weaver::Config::Assembler" : 0,
+            "strict" : 0,
+            "warnings" : 0
+         }
+      },
+      "test" : {
+         "requires" : {
+            "English" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES/issues"
+      },
+      "homepage" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES.git",
+         "web" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES"
+      }
+   },
+   "version" : "1.112790"
+}
+
