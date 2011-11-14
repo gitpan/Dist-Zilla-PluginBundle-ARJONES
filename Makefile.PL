@@ -24,6 +24,11 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::PluginBundle::ARJONES",
   "PREREQ_PM" => {
     "Dist::Zilla" => "2.100922",
+    "Dist::Zilla::App::Command::cover" => 0,
+    "Dist::Zilla::App::Command::perltidy" => 0,
+    "Dist::Zilla::Plugin::GithubMeta" => 0,
+    "Dist::Zilla::Plugin::PodWeaver" => 0,
+    "Dist::Zilla::Plugin::Test::Perl::Critic" => 0,
     "Dist::Zilla::PluginBundle::Basic" => 0,
     "Dist::Zilla::PluginBundle::Git" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
@@ -33,7 +38,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.112790",
+  "VERSION" => "1.113180",
   "test" => {
     "TESTS" => "t/*.t"
   }

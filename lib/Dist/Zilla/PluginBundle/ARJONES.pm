@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.112790';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113180';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -20,6 +20,21 @@ use Dist::Zilla::PluginBundle::Git;
 sub configure {
     my ($self) = @_;
 
+    # @Basic has:
+    #    GatherDir
+    #    PruneCruft
+    #    ManifestSkip
+    #    MetaYAML
+    #    License
+    #    Readme
+    #    ExtraTests
+    #    ExecDir
+    #    ShareDir
+    #    MakeMaker
+    #    Manifest
+    #    TestRelease
+    #    ConfirmRelease
+    #    UploadToCPAN
     $self->add_bundle('@Basic');
 
     $self->add_plugins(
@@ -29,6 +44,7 @@ sub configure {
           PkgVersion
           MetaJSON
           NextRelease
+          PodCoverageTests
           PodSyntaxTests
           Test::Perl::Critic
           )
@@ -38,6 +54,11 @@ sub configure {
 
     $self->add_plugins( [ GithubMeta => { issues => 1, } ], );
 
+    # @Git has:
+    #    Git::Check
+    #    Git::Commit
+    #    Git::Tag
+    #    Git::Push
     $self->add_bundle('@Git');
 }
 
@@ -54,7 +75,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.112790
+version 1.113180
 
 =head1 DESCRIPTION
 
@@ -62,10 +83,7 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
 
   [@Basic]
 
-  [@Git]
-
-  [@Basic]
-
+  [PodCoverageTests]
   [PodSyntaxTests]
   [Test::Perl::Critic]
 
@@ -79,6 +97,8 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
 
   [GithubMeta]
   issues = 1
+
+  [@Git]
 
 Heavily based on L<Dist::Zilla::PluginBundle::RJBS>.
 
