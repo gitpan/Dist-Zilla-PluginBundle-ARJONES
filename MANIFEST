@@ -11,4 +11,5 @@ lib/Dist/Zilla/PluginBundle/ARJONES.pm
 lib/Pod/Weaver/PluginBundle/ARJONES.pm
 t/author-critic.t
 t/compile.t
+t/release-pod-coverage.t
 t/release-pod-syntax.t

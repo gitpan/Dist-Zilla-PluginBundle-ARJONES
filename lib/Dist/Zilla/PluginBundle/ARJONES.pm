@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113180';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113210';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -75,7 +75,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.113180
+version 1.113210
 
 =head1 DESCRIPTION
 
@@ -100,7 +100,23 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
 
   [@Git]
 
+It also adds the following as Prereqs, so I can quickly get my C<dzil> environment set up:
+
+=over 4
+
+=item *
+
+L<Dist::Zilla::App::Command::cover>
+
+=item *
+
+L<Dist::Zilla::App::Command::perltidy>
+
+=back
+
 Heavily based on L<Dist::Zilla::PluginBundle::RJBS>.
+
+=for Pod::Coverage configure
 
 =head1 AUTHOR
 
