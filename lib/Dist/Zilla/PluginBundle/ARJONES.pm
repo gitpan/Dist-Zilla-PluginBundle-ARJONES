@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113210';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113320';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -47,6 +47,9 @@ sub configure {
           PodCoverageTests
           PodSyntaxTests
           Test::Perl::Critic
+          NoTabsTests
+          EOLTests
+          Test::Kwalitee
           )
     );
 
@@ -75,7 +78,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.113210
+version 1.113320
 
 =head1 DESCRIPTION
 
@@ -86,6 +89,9 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [PodCoverageTests]
   [PodSyntaxTests]
   [Test::Perl::Critic]
+  [NoTabsTests]
+  [EOLTests]
+  [Test::Kwalitee]
 
   [AutoPrereqs]
 

@@ -3,7 +3,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::ARJONES;
 {
-  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.113210';
+  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.113320';
 }
 
 # ABSTRACT: ARJONES's default Pod::Weaver config
@@ -62,7 +62,7 @@ Pod::Weaver::PluginBundle::ARJONES - ARJONES's default Pod::Weaver config
 
 =head1 VERSION
 
-version 1.113210
+version 1.113320
 
 =head1 DESCRIPTION
 
