@@ -26,9 +26,14 @@ my %WriteMakefileArgs = (
     "Dist::Zilla" => "2.100922",
     "Dist::Zilla::App::Command::cover" => 0,
     "Dist::Zilla::App::Command::perltidy" => 0,
+    "Dist::Zilla::Plugin::EOLTests" => 0,
     "Dist::Zilla::Plugin::GithubMeta" => 0,
     "Dist::Zilla::Plugin::PodWeaver" => 0,
+    "Dist::Zilla::Plugin::Test::Kwalitee" => 0,
     "Dist::Zilla::Plugin::Test::Perl::Critic" => 0,
+    "Dist::Zilla::Plugin::Test::Pod::No404s" => 0,
+    "Dist::Zilla::Plugin::Test::PodSpelling" => 0,
+    "Dist::Zilla::Plugin::Test::Portability" => 0,
     "Dist::Zilla::PluginBundle::Basic" => 0,
     "Dist::Zilla::PluginBundle::Git" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
@@ -43,7 +48,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.113320",
+  "VERSION" => "1.113460",
   "test" => {
     "TESTS" => "t/*.t"
   }

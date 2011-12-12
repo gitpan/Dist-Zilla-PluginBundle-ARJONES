@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113320';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113460';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -16,6 +16,28 @@ with 'Dist::Zilla::Role::PluginBundle::Easy';
 
 use Dist::Zilla::PluginBundle::Basic;
 use Dist::Zilla::PluginBundle::Git;
+
+# Alphabetical
+use Dist::Zilla::Plugin::EOLTests;
+use Dist::Zilla::Plugin::Test::Kwalitee;
+use Dist::Zilla::Plugin::Test::Pod::No404s;
+use Dist::Zilla::Plugin::Test::PodSpelling;
+use Dist::Zilla::Plugin::Test::Portability;
+
+
+sub mvp_multivalue_args { return qw( stopwords ) }
+
+has stopwords => (
+    is      => 'ro',
+    isa     => 'ArrayRef[Str]',
+    traits  => ['Array'],
+    default => sub { [] },
+    handles => {
+        push_stopwords => 'push',
+        uniq_stopwords => 'uniq',
+    }
+);
+
 
 sub configure {
     my ($self) = @_;
@@ -49,9 +71,23 @@ sub configure {
           Test::Perl::Critic
           NoTabsTests
           EOLTests
+          Test::Portability
           Test::Kwalitee
+          Test::Pod::No404s
           )
     );
+
+    # take stopwords from dist.ini, if present
+    if ( $_[0]->payload->{stopwords} ) {
+        for ( @{ $_[0]->payload->{stopwords} } ) {
+            $self->push_stopwords($_);
+        }
+    }
+
+    # our stopwords
+    $self->push_stopwords(qw/ARJONES ARJONES's TODO/);
+    $self->add_plugins(
+        [ 'Test::PodSpelling' => { stopwords => [ $self->uniq_stopwords ] } ] );
 
     $self->add_plugins( [ PodWeaver => { config_plugin => '@ARJONES' } ] );
 
@@ -78,8 +114,9 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.113320
+version 1.113460
 
+=for stopwords Prereqs CPAN
 =head1 DESCRIPTION
 
 This is the plugin bundle that ARJONES uses. It is equivalent to:
@@ -91,7 +128,10 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [Test::Perl::Critic]
   [NoTabsTests]
   [EOLTests]
+  [Test::Portability]
   [Test::Kwalitee]
+  [Test::Pod::No404s]
+  [Test::PodSpelling]
 
   [AutoPrereqs]
 
@@ -105,6 +145,10 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   issues = 1
 
   [@Git]
+
+It will take the following arguments:
+  ; extra stopwords for Test::PodSpelling
+  stopwords
 
 It also adds the following as Prereqs, so I can quickly get my C<dzil> environment set up:
 
@@ -121,6 +165,8 @@ L<Dist::Zilla::App::Command::perltidy>
 =back
 
 Heavily based on L<Dist::Zilla::PluginBundle::RJBS>.
+
+=for Pod::Coverage mvp_multivalue_args
 
 =for Pod::Coverage configure
 
