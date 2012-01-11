@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.113460';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120110';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -18,7 +18,7 @@ use Dist::Zilla::PluginBundle::Basic;
 use Dist::Zilla::PluginBundle::Git;
 
 # Alphabetical
-use Dist::Zilla::Plugin::EOLTests;
+use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::Pod::No404s;
 use Dist::Zilla::Plugin::Test::PodSpelling;
@@ -70,7 +70,6 @@ sub configure {
           PodSyntaxTests
           Test::Perl::Critic
           NoTabsTests
-          EOLTests
           Test::Portability
           Test::Kwalitee
           Test::Pod::No404s
@@ -114,7 +113,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.113460
+version 1.120110
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -127,7 +126,6 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [PodSyntaxTests]
   [Test::Perl::Critic]
   [NoTabsTests]
-  [EOLTests]
   [Test::Portability]
   [Test::Kwalitee]
   [Test::Pod::No404s]
