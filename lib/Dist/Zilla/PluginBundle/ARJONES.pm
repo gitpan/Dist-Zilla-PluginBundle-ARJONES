@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120110';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120240';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -23,6 +23,7 @@ use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::Pod::No404s;
 use Dist::Zilla::Plugin::Test::PodSpelling;
 use Dist::Zilla::Plugin::Test::Portability;
+use Dist::Zilla::Plugin::NoSmartCommentsTests;
 
 
 sub mvp_multivalue_args { return qw( stopwords ) }
@@ -73,6 +74,7 @@ sub configure {
           Test::Portability
           Test::Kwalitee
           Test::Pod::No404s
+          NoSmartCommentsTests
           )
     );
 
@@ -113,7 +115,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.120110
+version 1.120240
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -130,6 +132,7 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [Test::Kwalitee]
   [Test::Pod::No404s]
   [Test::PodSpelling]
+  [NoSmartCommentsTests]
 
   [AutoPrereqs]
 
@@ -174,7 +177,7 @@ Andrew Jones <andrew@arjones.co.uk>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Andrew Jones.
+This software is copyright (c) 2012 by Andrew Jones.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

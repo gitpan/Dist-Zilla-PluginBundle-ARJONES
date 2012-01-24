@@ -3,7 +3,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::ARJONES;
 {
-  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.120110';
+  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.120240';
 }
 
 # ABSTRACT: ARJONES's default Pod::Weaver config
@@ -63,7 +63,7 @@ Pod::Weaver::PluginBundle::ARJONES - ARJONES's default Pod::Weaver config
 
 =head1 VERSION
 
-version 1.120110
+version 1.120240
 
 =head1 DESCRIPTION
 
@@ -91,7 +91,7 @@ Andrew Jones <andrew@arjones.co.uk>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Andrew Jones.
+This software is copyright (c) 2012 by Andrew Jones.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

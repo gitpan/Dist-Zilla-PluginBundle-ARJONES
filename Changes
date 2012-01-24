@@ -1,3 +1,6 @@
+1.120240  2012-01-24 15:25:10 America/Los_Angeles
+    Add [NoSmartCommentsTests]
+
 1.120110  2012-01-11 12:10:04 Europe/London
     Fix Dist::Zilla::Plugin::NoTabsTests prereq
     Remove [EOLTests]. Too annoying
