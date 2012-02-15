@@ -4,7 +4,7 @@
       "Andrew Jones <andrew@arjones.co.uk>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
+   "generated_by" : "Dist::Zilla version 4.300007, CPAN::Meta::Converter version 2.113640",
    "license" : [
       "perl_5"
    ],
@@ -24,6 +24,7 @@
             "Dist::Zilla" : "2.100922",
             "Dist::Zilla::App::Command::cover" : 0,
             "Dist::Zilla::App::Command::perltidy" : 0,
+            "Dist::Zilla::Plugin::Clean" : 0,
             "Dist::Zilla::Plugin::GithubMeta" : 0,
             "Dist::Zilla::Plugin::NoSmartCommentsTests" : 0,
             "Dist::Zilla::Plugin::NoTabsTests" : 0,
@@ -52,7 +53,7 @@
       "test" : {
          "requires" : {
             "English" : 0,
-            "Test::More" : 0
+            "Test::More" : "0.88"
          }
       }
    },
@@ -68,6 +69,6 @@
          "web" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES"
       }
    },
-   "version" : "1.120240"
+   "version" : "1.120460"
 }
 

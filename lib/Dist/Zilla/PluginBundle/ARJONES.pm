@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120240';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120460';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -18,6 +18,7 @@ use Dist::Zilla::PluginBundle::Basic;
 use Dist::Zilla::PluginBundle::Git;
 
 # Alphabetical
+use Dist::Zilla::Plugin::Clean;
 use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::Pod::No404s;
@@ -75,6 +76,7 @@ sub configure {
           Test::Kwalitee
           Test::Pod::No404s
           NoSmartCommentsTests
+          Clean
           )
     );
 
@@ -115,7 +117,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.120240
+version 1.120460
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -141,6 +143,8 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [PkgVersion]
   [NextRelease]
   [MetaJSON]
+
+  [Clean]
 
   [GithubMeta]
   issues = 1

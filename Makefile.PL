@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "Andrew Jones <andrew\@arjones.co.uk>",
   "BUILD_REQUIRES" => {
     "English" => 0,
-    "Test::More" => 0
+    "Test::More" => "0.88"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -26,6 +26,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla" => "2.100922",
     "Dist::Zilla::App::Command::cover" => 0,
     "Dist::Zilla::App::Command::perltidy" => 0,
+    "Dist::Zilla::Plugin::Clean" => 0,
     "Dist::Zilla::Plugin::GithubMeta" => 0,
     "Dist::Zilla::Plugin::NoSmartCommentsTests" => 0,
     "Dist::Zilla::Plugin::NoTabsTests" => 0,
@@ -50,7 +51,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.120240",
+  "VERSION" => "1.120460",
   "test" => {
     "TESTS" => "t/*.t"
   }
