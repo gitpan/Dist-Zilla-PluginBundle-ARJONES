@@ -10,7 +10,6 @@ dist.ini
 lib/Dist/Zilla/PluginBundle/ARJONES.pm
 lib/Pod/Weaver/PluginBundle/ARJONES.pm
 t/author-critic.t
-t/author-pod-spell.t
 t/compile.t
 t/release-kwalitee.t
 t/release-no-smart-comments.t
