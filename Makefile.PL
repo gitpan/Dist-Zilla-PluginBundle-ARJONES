@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "L<Dist::Zilla> plugins for ARJONES",
+  "ABSTRACT" => "L<Dist::Zilla> plugins for ARJONES\r",
   "AUTHOR" => "Andrew Jones <andrew\@arjones.co.uk>",
   "BUILD_REQUIRES" => {
     "English" => 0,
@@ -31,9 +31,11 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::NoSmartCommentsTests" => 0,
     "Dist::Zilla::Plugin::NoTabsTests" => 0,
     "Dist::Zilla::Plugin::PodWeaver" => 0,
+    "Dist::Zilla::Plugin::Test::Compile" => 0,
     "Dist::Zilla::Plugin::Test::Kwalitee" => 0,
     "Dist::Zilla::Plugin::Test::Perl::Critic" => 0,
     "Dist::Zilla::Plugin::Test::Pod::No404s" => 0,
+    "Dist::Zilla::Plugin::Test::PodSpelling" => 0,
     "Dist::Zilla::Plugin::Test::Portability" => 0,
     "Dist::Zilla::PluginBundle::Basic" => 0,
     "Dist::Zilla::PluginBundle::Git" => 0,
@@ -50,7 +52,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.120570",
+  "VERSION" => "1.120690",
   "test" => {
     "TESTS" => "t/*.t"
   }

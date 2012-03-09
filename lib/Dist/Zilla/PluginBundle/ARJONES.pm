@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120570';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120690';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -20,8 +20,10 @@ use Dist::Zilla::PluginBundle::Git;
 # Alphabetical
 use Dist::Zilla::Plugin::Clean;
 use Dist::Zilla::Plugin::NoTabsTests;
+use Dist::Zilla::Plugin::Test::Compile;
 use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::Pod::No404s;
+use Dist::Zilla::Plugin::Test::PodSpelling;
 use Dist::Zilla::Plugin::Test::Portability;
 use Dist::Zilla::Plugin::NoSmartCommentsTests;
 
@@ -73,6 +75,7 @@ sub configure {
           NoTabsTests
           Test::Portability
           Test::Kwalitee
+          Test::Compile
           Test::Pod::No404s
           NoSmartCommentsTests
           Clean
@@ -85,6 +88,11 @@ sub configure {
             $self->push_stopwords($_);
         }
     }
+
+    # our stopwords
+    $self->push_stopwords(qw/ARJONES ARJONES's TODO/);
+    $self->add_plugins(
+        [ 'Test::PodSpelling' => { stopwords => [ $self->uniq_stopwords ] } ] );
 
     $self->add_plugins( [ PodWeaver => { config_plugin => '@ARJONES' } ] );
 
@@ -111,7 +119,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.120570
+version 1.120690
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -127,7 +135,9 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [Test::Portability]
   [Test::Kwalitee]
   [Test::Pod::No404s]
+  [Test::PodSpelling]
   [NoSmartCommentsTests]
+  [Test::Compile]
 
   [AutoPrereqs]
 
