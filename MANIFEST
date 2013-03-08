@@ -9,6 +9,7 @@ README
 dist.ini
 lib/Dist/Zilla/PluginBundle/ARJONES.pm
 lib/Pod/Weaver/PluginBundle/ARJONES.pm
+t/00-compile.t
 t/author-critic.t
 t/compile.t
 t/release-kwalitee.t

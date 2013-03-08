@@ -3,12 +3,13 @@ abstract: "L<Dist::Zilla> plugins for ARJONES\r"
 author:
   - 'Andrew Jones <andrew@arjones.co.uk>'
 build_requires:
-  English: 0
-  Test::More: 0.88
+  File::Find: 0
+  File::Temp: 0
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.113640'
+generated_by: 'Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,7 +28,6 @@ requires:
   Dist::Zilla::Plugin::Test::Kwalitee: 0
   Dist::Zilla::Plugin::Test::Perl::Critic: 0
   Dist::Zilla::Plugin::Test::Pod::No404s: 0
-  Dist::Zilla::Plugin::Test::PodSpelling: 0
   Dist::Zilla::Plugin::Test::Portability: 0
   Dist::Zilla::PluginBundle::Basic: 0
   Dist::Zilla::PluginBundle::Git: 0
@@ -47,4 +47,4 @@ resources:
   bugtracker: https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES/issues
   homepage: https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES
   repository: https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES.git
-version: 1.120690
+version: 1.130670

@@ -12,8 +12,9 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "L<Dist::Zilla> plugins for ARJONES\r",
   "AUTHOR" => "Andrew Jones <andrew\@arjones.co.uk>",
   "BUILD_REQUIRES" => {
-    "English" => 0,
-    "Test::More" => "0.88"
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Test::More" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -35,7 +36,6 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::Test::Kwalitee" => 0,
     "Dist::Zilla::Plugin::Test::Perl::Critic" => 0,
     "Dist::Zilla::Plugin::Test::Pod::No404s" => 0,
-    "Dist::Zilla::Plugin::Test::PodSpelling" => 0,
     "Dist::Zilla::Plugin::Test::Portability" => 0,
     "Dist::Zilla::PluginBundle::Basic" => 0,
     "Dist::Zilla::PluginBundle::Git" => 0,
@@ -52,7 +52,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.120690",
+  "VERSION" => "1.130670",
   "test" => {
     "TESTS" => "t/*.t"
   }

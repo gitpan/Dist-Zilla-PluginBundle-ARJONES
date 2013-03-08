@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.120690';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.130670';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -23,7 +23,6 @@ use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::Test::Compile;
 use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::Pod::No404s;
-use Dist::Zilla::Plugin::Test::PodSpelling;
 use Dist::Zilla::Plugin::Test::Portability;
 use Dist::Zilla::Plugin::NoSmartCommentsTests;
 
@@ -89,11 +88,6 @@ sub configure {
         }
     }
 
-    # our stopwords
-    $self->push_stopwords(qw/ARJONES ARJONES's TODO/);
-    $self->add_plugins(
-        [ 'Test::PodSpelling' => { stopwords => [ $self->uniq_stopwords ] } ] );
-
     $self->add_plugins( [ PodWeaver => { config_plugin => '@ARJONES' } ] );
 
     $self->add_plugins( [ GithubMeta => { issues => 1, } ], );
@@ -119,7 +113,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.120690
+version 1.130670
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -135,7 +129,6 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [Test::Portability]
   [Test::Kwalitee]
   [Test::Pod::No404s]
-  [Test::PodSpelling]
   [NoSmartCommentsTests]
   [Test::Compile]
 
@@ -184,7 +177,7 @@ Andrew Jones <andrew@arjones.co.uk>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Andrew Jones.
+This software is copyright (c) 2013 by Andrew Jones.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
