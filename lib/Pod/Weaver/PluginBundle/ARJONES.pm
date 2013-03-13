@@ -3,10 +3,13 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::ARJONES;
 {
-  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.130670';
+  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.130720';
 }
 
 # ABSTRACT: ARJONES's default Pod::Weaver config
+
+use Pod::Weaver::Plugin::Encoding ();
+use Pod::Weaver::Section::Contributors 0.001 ();
 
 
 use Pod::Weaver::Config::Assembler;
@@ -43,10 +46,12 @@ sub mvp_bundle_config {
 
     push @plugins,
       (
+        [ '@ARJONES/Encoding',  _exp('-Encoding'), {} ],
         [ '@ARJONES/Leftovers', _exp('Leftovers'), {} ],
         [ '@ARJONES/postlude', _exp('Region'),  { region_name => 'postlude' } ],
         [ '@ARJONES/Authors',  _exp('Authors'), {} ],
-        [ '@ARJONES/Legal',    _exp('Legal'),   {} ],
+        [ '@ARJONES/Contributors', _exp('Contributors'), {} ],
+        [ '@ARJONES/Legal',        _exp('Legal'),        {} ],
         [ '@ARJONES/List', _exp('-Transformer'), { 'transformer' => 'List' } ],
       );
 
@@ -58,13 +63,15 @@ sub mvp_bundle_config {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Pod::Weaver::PluginBundle::ARJONES - ARJONES's default Pod::Weaver config
 
 =head1 VERSION
 
-version 1.130670
+version 1.130720
 
 =head1 DESCRIPTION
 
@@ -89,6 +96,24 @@ Heavily based on L<Pod::Weaver::PluginBundle::RJBS>.
 =head1 AUTHOR
 
 Andrew Jones <andrew@arjones.co.uk>
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Andrew Jones <andrew.jones@arm.com>
+
+=item *
+
+Andrew Jones <andrewjones86@googlemail.com>
+
+=item *
+
+andrewrjones <andrewjones86@googlemail.com>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

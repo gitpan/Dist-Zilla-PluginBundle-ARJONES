@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.130670';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.130720';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -19,6 +19,7 @@ use Dist::Zilla::PluginBundle::Git;
 
 # Alphabetical
 use Dist::Zilla::Plugin::Clean;
+use Dist::Zilla::Plugin::ContributorsFromGit;
 use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::Test::Compile;
 use Dist::Zilla::Plugin::Test::Kwalitee;
@@ -78,6 +79,7 @@ sub configure {
           Test::Pod::No404s
           NoSmartCommentsTests
           Clean
+          ContributorsFromGit
           )
     );
 
@@ -107,13 +109,15 @@ no Moose;
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.130670
+version 1.130720
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -141,6 +145,8 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [MetaJSON]
 
   [Clean]
+
+  [ContributorsFromGit]
 
   [GithubMeta]
   issues = 1
@@ -174,6 +180,24 @@ Heavily based on L<Dist::Zilla::PluginBundle::RJBS>.
 =head1 AUTHOR
 
 Andrew Jones <andrew@arjones.co.uk>
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Andrew Jones <andrew.jones@arm.com>
+
+=item *
+
+Andrew Jones <andrewjones86@googlemail.com>
+
+=item *
+
+andrewrjones <andrewjones86@googlemail.com>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

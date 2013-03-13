@@ -1,5 +1,5 @@
 ---
-abstract: "L<Dist::Zilla> plugins for ARJONES\r"
+abstract: 'L<Dist::Zilla> plugins for ARJONES'
 author:
   - 'Andrew Jones <andrew@arjones.co.uk>'
 build_requires:
@@ -20,6 +20,7 @@ requires:
   Dist::Zilla::App::Command::cover: 0
   Dist::Zilla::App::Command::perltidy: 0
   Dist::Zilla::Plugin::Clean: 0
+  Dist::Zilla::Plugin::ContributorsFromGit: 0
   Dist::Zilla::Plugin::GithubMeta: 0
   Dist::Zilla::Plugin::NoSmartCommentsTests: 0
   Dist::Zilla::Plugin::NoTabsTests: 0
@@ -37,6 +38,8 @@ requires:
   Pod::Coverage::TrustPod: 0
   Pod::Elemental::Transformer::List: 0
   Pod::Weaver::Config::Assembler: 0
+  Pod::Weaver::Plugin::Encoding: 0
+  Pod::Weaver::Section::Contributors: 0.001
   Test::NoSmartComments: 0
   Test::Perl::Critic: 0
   Test::Pod: 1.41
@@ -47,4 +50,8 @@ resources:
   bugtracker: https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES/issues
   homepage: https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES
   repository: https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES.git
-version: 1.130670
+version: 1.130720
+x_contributors:
+  - 'Andrew Jones <andrew.jones@arm.com>'
+  - 'Andrew Jones <andrewjones86@googlemail.com>'
+  - 'andrewrjones <andrewjones86@googlemail.com>'
