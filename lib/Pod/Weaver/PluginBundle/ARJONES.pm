@@ -3,7 +3,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::ARJONES;
 {
-  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.130720';
+  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.131000';
 }
 
 # ABSTRACT: ARJONES's default Pod::Weaver config
@@ -71,7 +71,7 @@ Pod::Weaver::PluginBundle::ARJONES - ARJONES's default Pod::Weaver config
 
 =head1 VERSION
 
-version 1.130720
+version 1.131000
 
 =head1 DESCRIPTION
 
@@ -104,6 +104,10 @@ Andrew Jones <andrew@arjones.co.uk>
 =item *
 
 Andrew Jones <andrew.jones@arm.com>
+
+=item *
+
+Andrew Jones <andrew@andrew-jones.com>
 
 =item *
 

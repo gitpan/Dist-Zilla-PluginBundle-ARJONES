@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.130720';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.131000';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -18,9 +18,11 @@ use Dist::Zilla::PluginBundle::Basic;
 use Dist::Zilla::PluginBundle::Git;
 
 # Alphabetical
+use Dist::Zilla::Plugin::Test::ChangesHasContent;
 use Dist::Zilla::Plugin::Clean;
 use Dist::Zilla::Plugin::ContributorsFromGit;
 use Dist::Zilla::Plugin::NoTabsTests;
+use Dist::Zilla::Plugin::ReportVersions::Tiny;
 use Dist::Zilla::Plugin::Test::Compile;
 use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::Pod::No404s;
@@ -80,6 +82,8 @@ sub configure {
           NoSmartCommentsTests
           Clean
           ContributorsFromGit
+          Test::ChangesHasContent
+          ReportVersions::Tiny
           )
     );
 
@@ -117,7 +121,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.130720
+version 1.131000
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -135,6 +139,8 @@ This is the plugin bundle that ARJONES uses. It is equivalent to:
   [Test::Pod::No404s]
   [NoSmartCommentsTests]
   [Test::Compile]
+  [ReportVersions::Tiny]
+  [Test::ChangesHasContent]
 
   [AutoPrereqs]
 
@@ -188,6 +194,10 @@ Andrew Jones <andrew@arjones.co.uk>
 =item *
 
 Andrew Jones <andrew.jones@arm.com>
+
+=item *
+
+Andrew Jones <andrew@andrew-jones.com>
 
 =item *
 

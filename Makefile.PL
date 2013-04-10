@@ -14,7 +14,7 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {
     "File::Find" => 0,
     "File::Temp" => 0,
-    "Test::More" => 0
+    "Test::More" => "0.88"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -33,6 +33,8 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::NoSmartCommentsTests" => 0,
     "Dist::Zilla::Plugin::NoTabsTests" => 0,
     "Dist::Zilla::Plugin::PodWeaver" => 0,
+    "Dist::Zilla::Plugin::ReportVersions::Tiny" => 0,
+    "Dist::Zilla::Plugin::Test::ChangesHasContent" => 0,
     "Dist::Zilla::Plugin::Test::Compile" => 0,
     "Dist::Zilla::Plugin::Test::Kwalitee" => 0,
     "Dist::Zilla::Plugin::Test::Perl::Critic" => 0,
@@ -55,7 +57,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.130720",
+  "VERSION" => "1.131000",
   "test" => {
     "TESTS" => "t/*.t"
   }

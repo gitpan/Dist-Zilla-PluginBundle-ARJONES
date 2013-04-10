@@ -23,7 +23,8 @@
          "requires" : {
             "Pod::Coverage::TrustPod" : "0",
             "Test::Pod" : "1.41",
-            "Test::Pod::Coverage" : "1.08"
+            "Test::Pod::Coverage" : "1.08",
+            "version" : "0.9901"
          }
       },
       "runtime" : {
@@ -37,6 +38,8 @@
             "Dist::Zilla::Plugin::NoSmartCommentsTests" : "0",
             "Dist::Zilla::Plugin::NoTabsTests" : "0",
             "Dist::Zilla::Plugin::PodWeaver" : "0",
+            "Dist::Zilla::Plugin::ReportVersions::Tiny" : "0",
+            "Dist::Zilla::Plugin::Test::ChangesHasContent" : "0",
             "Dist::Zilla::Plugin::Test::Compile" : "0",
             "Dist::Zilla::Plugin::Test::Kwalitee" : "0",
             "Dist::Zilla::Plugin::Test::Perl::Critic" : "0",
@@ -64,7 +67,7 @@
          "requires" : {
             "File::Find" : "0",
             "File::Temp" : "0",
-            "Test::More" : "0"
+            "Test::More" : "0.88"
          }
       }
    },
@@ -80,9 +83,10 @@
          "web" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES"
       }
    },
-   "version" : "1.130720",
+   "version" : "1.131000",
    "x_contributors" : [
       "Andrew Jones <andrew.jones@arm.com>",
+      "Andrew Jones <andrew@andrew-jones.com>",
       "Andrew Jones <andrewjones86@googlemail.com>",
       "andrewrjones <andrewjones86@googlemail.com>"
    ]
