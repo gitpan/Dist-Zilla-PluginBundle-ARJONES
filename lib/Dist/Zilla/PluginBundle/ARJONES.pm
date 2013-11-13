@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.131000';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.133170';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -98,12 +98,15 @@ sub configure {
 
     $self->add_plugins( [ GithubMeta => { issues => 1, } ], );
 
-    # @Git has:
-    #    Git::Check
-    #    Git::Commit
-    #    Git::Tag
-    #    Git::Push
-    $self->add_bundle('@Git');
+    # Git
+    $self->add_plugins(
+        qw(
+          Git::Commit
+          Git::Tag
+          Git::Push
+          )
+    );
+    $self->add_plugins( [ 'Git::Check' => { allow_dirty => '', } ], );
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -111,9 +114,10 @@ no Moose;
 1;
 
 __END__
+
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -121,7 +125,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.131000
+version 1.133170
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -217,4 +221,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

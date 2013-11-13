@@ -3,7 +3,7 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::ARJONES;
 {
-  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.131000';
+  $Pod::Weaver::PluginBundle::ARJONES::VERSION = '1.133170';
 }
 
 # ABSTRACT: ARJONES's default Pod::Weaver config
@@ -61,9 +61,10 @@ sub mvp_bundle_config {
 1;
 
 __END__
+
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -71,7 +72,7 @@ Pod::Weaver::PluginBundle::ARJONES - ARJONES's default Pod::Weaver config
 
 =head1 VERSION
 
-version 1.131000
+version 1.133170
 
 =head1 DESCRIPTION
 
@@ -97,28 +98,6 @@ Heavily based on L<Pod::Weaver::PluginBundle::RJBS>.
 
 Andrew Jones <andrew@arjones.co.uk>
 
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item *
-
-Andrew Jones <andrew.jones@arm.com>
-
-=item *
-
-Andrew Jones <andrew@andrew-jones.com>
-
-=item *
-
-Andrew Jones <andrewjones86@googlemail.com>
-
-=item *
-
-andrewrjones <andrewjones86@googlemail.com>
-
-=back
-
 =head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2013 by Andrew Jones.
@@ -127,4 +106,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

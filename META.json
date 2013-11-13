@@ -4,7 +4,7 @@
       "Andrew Jones <andrew@arjones.co.uk>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132830",
    "license" : [
       "perl_5"
    ],
@@ -22,6 +22,9 @@
       "develop" : {
          "requires" : {
             "Pod::Coverage::TrustPod" : "0",
+            "Test::Kwalitee" : "1.12",
+            "Test::More" : "0",
+            "Test::NoTabs" : "0",
             "Test::Pod" : "1.41",
             "Test::Pod::Coverage" : "1.08",
             "version" : "0.9901"
@@ -56,6 +59,7 @@
             "Pod::Weaver::Plugin::Encoding" : "0",
             "Pod::Weaver::Section::Contributors" : "0.001",
             "Test::NoSmartComments" : "0",
+            "Test::NoTabs" : "1.3",
             "Test::Perl::Critic" : "0",
             "Test::Pod" : "1.41",
             "Test::Pod::Coverage" : "1.08",
@@ -65,8 +69,9 @@
       },
       "test" : {
          "requires" : {
-            "File::Find" : "0",
-            "File::Temp" : "0",
+            "File::Spec" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "Test::More" : "0.88"
          }
       }
@@ -83,7 +88,7 @@
          "web" : "https://github.com/andrewrjones/perl5-Dist-Zilla-PluginBundle-ARJONES"
       }
    },
-   "version" : "1.131000",
+   "version" : "1.133170",
    "x_contributors" : [
       "Andrew Jones <andrew.jones@arm.com>",
       "Andrew Jones <andrew@andrew-jones.com>",
