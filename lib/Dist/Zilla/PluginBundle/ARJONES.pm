@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::PluginBundle::ARJONES;
 {
-  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.133170';
+  $Dist::Zilla::PluginBundle::ARJONES::VERSION = '1.133200';
 }
 
 # ABSTRACT: L<Dist::Zilla> plugins for ARJONES
@@ -125,7 +125,7 @@ Dist::Zilla::PluginBundle::ARJONES - L<Dist::Zilla> plugins for ARJONES
 
 =head1 VERSION
 
-version 1.133170
+version 1.133200
 
 =for stopwords Prereqs CPAN
 =head1 DESCRIPTION
@@ -206,6 +206,10 @@ Andrew Jones <andrew@andrew-jones.com>
 =item *
 
 Andrew Jones <andrewjones86@googlemail.com>
+
+=item *
+
+Sergey Romanov <complefor@rambler.ru>
 
 =item *
 

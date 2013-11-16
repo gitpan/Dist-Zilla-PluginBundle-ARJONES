@@ -44,7 +44,6 @@ my %WriteMakefileArgs = (
     "Pod::Coverage::TrustPod" => 0,
     "Pod::Elemental::Transformer::List" => 0,
     "Pod::Weaver::Config::Assembler" => 0,
-    "Pod::Weaver::Plugin::Encoding" => 0,
     "Pod::Weaver::Section::Contributors" => "0.001",
     "Test::NoSmartComments" => 0,
     "Test::NoTabs" => "1.3",
@@ -60,7 +59,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => "0.88"
   },
-  "VERSION" => "1.133170",
+  "VERSION" => "1.133200",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -95,7 +94,6 @@ my %FallbackPrereqs = (
   "Pod::Coverage::TrustPod" => 0,
   "Pod::Elemental::Transformer::List" => 0,
   "Pod::Weaver::Config::Assembler" => 0,
-  "Pod::Weaver::Plugin::Encoding" => 0,
   "Pod::Weaver::Section::Contributors" => "0.001",
   "Test::More" => "0.88",
   "Test::NoSmartComments" => 0,
